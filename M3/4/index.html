@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../style/style.css?rnd=132">
+  
+    <!--***** dos lineas de scripts para guardar imagen-->
+    <script type="text/javascript" src="../../js/html2canvas.js"></script>
+    <script type="text/javascript" src="../../js/html2canvas.min.js"></script>
+    <!--***** Fin de dos lineas de scripts para guardar imagen-->
+
+</head>
+
+<body>
+
+    <div id="contenedor">
+        <div style="position:absolute;top:0.000000px;left:0.000000px"><nobr><img height="1099.000000" width="872.000000" src ="bgimg/fondo.jpg"/></nobr></div>
+        <!--Empezar a agregar contenido-->
+		<span style="position: absolute; top: 277px; left: 394px">
+			<input type="checkbox" id="ea1_p49res1">
+		</span>
+     <span style="position: absolute; top: 276px; left: 219px">
+			<input type="checkbox" id="ea1_p49res2">
+	  </span>
+     <span style="position: absolute; top: 748px; left: 394px">
+			<input type="checkbox" id="ea1_p49res3">
+	  </span>
+     <span style="position: absolute; top: 748px; left: 219px">
+			<input type="checkbox" id="ea1_p49res4">
+	  </span>
+     <span style="position: absolute; top: 630px; left: 395px">
+			<input type="checkbox" id="ea1_p49res5">
+	  </span>
+     <span style="position: absolute; top: 631px; left: 219px">
+			<input type="checkbox" id="ea1_p49res6">
+	  </span>
+     <span style="position: absolute; top: 511px; left: 394px">
+			<input type="checkbox" id="ea1_p49res7">
+	  </span>
+     <span style="position: absolute; top: 511px; left: 219px">
+			<input type="checkbox" id="ea1_p49res8">
+	  </span>
+     <span style="position: absolute; top: 393px; left: 219px">
+			<input type="checkbox" id="ea1_p49res9">
+	  </span>
+     <span style="position: absolute; top: 393px; left: 394px">
+			<input type="checkbox" id="ea1_p49res10">
+	  </span>
+      <span style="position: absolute; top: 791px; left: 781px">
+		<input type="checkbox" id="ea1_p49res11">
+	</span>
+      <span style="position: absolute; top: 839px; left: 741px">
+		<input type="checkbox" id="ea1_p49res12">
+	</span>
+      <span style="position: absolute; top: 838px; left: 781px">
+		<input type="checkbox" id="ea1_p49res13">
+	</span>
+      <span style="position: absolute; top: 791px; left: 741px">
+		<input type="checkbox" id="ea1_p49res14">
+	</span>
+      <span style="position: absolute; top: 881px; left: 781px">
+		<input type="checkbox" id="ea1_p49res15">
+	</span>
+      <span style="position: absolute; top: 882px; left: 741px">
+		<input type="checkbox" id="ea1_p49res16">
+	</span>
+      
+      <span style="position: absolute; top: 548px; left: 754px">
+		<textarea rows = "1" cols = "2" maxlength = "2" id="ea1_p49res17"></textarea>
+	</span>
+      <span style="position: absolute; top: 426px; left: 754px">
+		<textarea rows = "1" cols = "2" maxlength = "2" id="ea1_p49res18"></textarea>
+	</span>
+      <span style="position: absolute; top: 467px; left: 754px">
+	  <textarea rows = "1" cols = "2" maxlength = "2" id="ea1_p49res19"></textarea>
+	</span>
+      <span style="position: absolute; top: 488px; left: 754px">
+	  <textarea rows = "1" cols = "2" maxlength = "2" id="ea1_p49res20"></textarea>
+	</span>
+      <span style="position: absolute; top: 508px; left: 754px">
+		<textarea rows = "1" cols = "2" maxlength = "2" id="ea1_p49res21"></textarea>
+	</span>
+
+  <form style="margin-top: 1040px;margin-left: 190px; position: absolute; z-index: 2;" id="myForm" action="../../send.php" method="post">
+        <textarea style="display:none;" id="myInput" name = "imagen"></textarea>
+        <input type="button" onclick="save_data()" value="Save"  class="btn btn-primary">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="button" onclick="send_data(); loader(); return false" value="Send" class="btn btn-primary"> 
+        <input type="hidden" id="ea1_regNA" name="ea1_regNA">
+        <input type="hidden" id="ea1_regGP" name="ea1_regGP">
+        <input type="hidden" id="ea1_regCA" name="ea1_regCA">
+        <input type="hidden" id="ea1_regND" name="ea1_regND">
+        <input type="hidden" id="ea1_regCD" name="ea1_regCD">
+    </form>
+
+    <div id="loader" style="display:none; margin-top: 1030px;margin-left: 190px; position: absolute; z-index: 2;">
+        <img src="../../img/carga.gif"  width="180px" height="65px">
+    </div>
+       
+        <!--Fin del contenido-->
+            
+    </div>       
+</body>
+<script type="text/javascript">
+	//Carga datos del registro
+    document.getElementById('ea1_regNA').value = localStorage.getItem('ea1_regNA');
+    document.getElementById('ea1_regGP').value = localStorage.getItem('ea1_regGP');
+    document.getElementById('ea1_regCA').value = localStorage.getItem('ea1_regCA');
+    document.getElementById('ea1_regND').value = localStorage.getItem('ea1_regND');
+    document.getElementById('ea1_regCD').value = localStorage.getItem('ea1_regCD');
+
+    document.getElementById('ea1_p49res1').value = localStorage.getItem('ea1_p49res1');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    //comprobar si el valor es 1 se selecciona 
+    if(document.getElementById('ea1_p49res1').value == "1")
+        document.getElementById("ea1_p49res1").checked = true; // si es uno se activa en checkbox
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('ea1_p49res2').value = localStorage.getItem('ea1_p49res2');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p49res2').value == "1")
+        document.getElementById("ea1_p49res2").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('ea1_p49res3').value = localStorage.getItem('ea1_p49res3');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p49res3').value == "1")
+        document.getElementById("ea1_p49res3").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('ea1_p49res4').value = localStorage.getItem('ea1_p49res4');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p49res4').value == "1")
+        document.getElementById("ea1_p49res4").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('ea1_p49res5').value = localStorage.getItem('ea1_p49res5');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p49res5').value == "1")
+        document.getElementById("ea1_p49res5").checked = true; 
+
+    document.getElementById('ea1_p49res6').value = localStorage.getItem('ea1_p49res6');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p49res6').value == "1")
+        document.getElementById("ea1_p49res6").checked = true; 
+
+    document.getElementById('ea1_p49res7').value = localStorage.getItem('ea1_p49res7');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p49res7').value == "1")
+        document.getElementById("ea1_p49res7").checked = true; 
+
+    document.getElementById('ea1_p49res8').value = localStorage.getItem('ea1_p49res8');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p49res8').value == "1")
+        document.getElementById("ea1_p49res8").checked = true; 
+
+    document.getElementById('ea1_p49res9').value = localStorage.getItem('ea1_p49res9');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p49res9').value == "1")
+        document.getElementById("ea1_p49res9").checked = true; 
+
+    document.getElementById('ea1_p49res10').value = localStorage.getItem('ea1_p49res10');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p49res10').value == "1")
+        document.getElementById("ea1_p49res10").checked = true; 
+
+    document.getElementById('ea1_p49res11').value = localStorage.getItem('ea1_p49res11');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p49res11').value == "1")
+        document.getElementById("ea1_p49res11").checked = true; 
+
+    document.getElementById('ea1_p49res12').value = localStorage.getItem('ea1_p49res12');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p49res12').value == "1")
+        document.getElementById("ea1_p49res12").checked = true; 
+
+    document.getElementById('ea1_p49res13').value = localStorage.getItem('ea1_p49res13');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p49res13').value == "1")
+        document.getElementById("ea1_p49res13").checked = true; 
+
+    document.getElementById('ea1_p49res14').value = localStorage.getItem('ea1_p49res14');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p49res14').value == "1")
+        document.getElementById("ea1_p49res14").checked = true; 
+
+    document.getElementById('ea1_p49res15').value = localStorage.getItem('ea1_p49res15');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p49res15').value == "1")
+        document.getElementById("ea1_p49res15").checked = true; 
+
+    document.getElementById('ea1_p49res16').value = localStorage.getItem('ea1_p49res16');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p49res16').value == "1")
+        document.getElementById("ea1_p49res16").checked = true; 
+
+    document.getElementById('ea1_p49res17').value = localStorage.getItem('ea1_p49res17');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p49res17').value == "1")
+        document.getElementById("ea1_p49res17").checked = true; 
+    document.getElementById('ea1_p49res17').value = localStorage.getItem('ea1_p49res17');
+    document.getElementById('ea1_p49res18').value = localStorage.getItem('ea1_p49res18');
+    document.getElementById('ea1_p49res19').value = localStorage.getItem('ea1_p49res19');
+    document.getElementById('ea1_p49res20').value = localStorage.getItem('ea1_p49res20');
+    document.getElementById('ea1_p49res21').value = localStorage.getItem('ea1_p49res21');
+
+
+    function save_data(){
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        //verificar si el check esta seleccionado se asigna un 1 para activarlo al momento de cargar
+        var isChecked = document.getElementById('ea1_p49res1').checked;
+        // si esta seleccionado se asigna bandera 1
+        if(isChecked){
+            var ea1_p49res1 = "1";
+        }
+        localStorage.setItem('ea1_p49res1', ea1_p49res1);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p49res2').checked;
+        if(isChecked){
+            var ea1_p49res2 = "1";
+        }    
+        localStorage.setItem('ea1_p49res2', ea1_p49res2);
+        console.log("ea1_p49res2",ea1_p49res2);
+        //** FIN PARA GUARDAR CHECKBOX **//
+        
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p49res3').checked;
+        if(isChecked){
+            var ea1_p49res3 = "1";
+        }    
+        localStorage.setItem('ea1_p49res3', ea1_p49res3);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p49res4').checked;
+        if(isChecked){
+            var ea1_p49res4 = "1";
+        }    
+        localStorage.setItem('ea1_p49res4', ea1_p49res4);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p49res5').checked;
+        if(isChecked){
+            var ea1_p49res5 = "1";
+        }    
+        localStorage.setItem('ea1_p49res5', ea1_p49res5);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p49res6').checked;
+        if(isChecked){
+            var ea1_p49res6 = "1";
+        }    
+        localStorage.setItem('ea1_p49res6', ea1_p49res6);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p49res7').checked;
+        if(isChecked){
+            var ea1_p49res7 = "1";
+        }    
+        localStorage.setItem('ea1_p49res7', ea1_p49res7);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p49res8').checked;
+        if(isChecked){
+            var ea1_p49res8 = "1";
+        }    
+        localStorage.setItem('ea1_p49res8', ea1_p49res8);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p49res9').checked;
+        if(isChecked){
+            var ea1_p49res9 = "1";
+        }    
+        localStorage.setItem('ea1_p49res9', ea1_p49res9);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p49res10').checked;
+        if(isChecked){
+            var ea1_p49res10 = "1";
+        }    
+        localStorage.setItem('ea1_p49res10', ea1_p49res10);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p49res11').checked;
+        if(isChecked){
+            var ea1_p49res11 = "1";
+        }    
+        localStorage.setItem('ea1_p49res11', ea1_p49res11);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p49res12').checked;
+        if(isChecked){
+            var ea1_p49res12 = "1";
+        }    
+        localStorage.setItem('ea1_p49res12', ea1_p49res12);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p49res13').checked;
+        if(isChecked){
+            var ea1_p49res13 = "1";
+        }    
+        localStorage.setItem('ea1_p49res13', ea1_p49res13);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p49res14').checked;
+        if(isChecked){
+            var ea1_p49res14 = "1";
+        }    
+        localStorage.setItem('ea1_p49res14', ea1_p49res14);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p49res15').checked;
+        if(isChecked){
+            var ea1_p49res15 = "1";
+        }    
+        localStorage.setItem('ea1_p49res15', ea1_p49res15);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p49res16').checked;
+        if(isChecked){
+            var ea1_p49res16 = "1";
+        }    
+        localStorage.setItem('ea1_p49res16', ea1_p49res16);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p49res17').checked;
+        if(isChecked){
+            var ea1_p49res17 = "1";
+        }    
+        localStorage.setItem('ea1_p49res17', ea1_p49res17);
+        //** FIN PARA GUARDAR CHECKBOX **//
+        var ea1_p49res17 = document.getElementById('ea1_p49res17').value;
+        localStorage.setItem('ea1_p49res17', ea1_p49res17);
+        var ea1_p49res18 = document.getElementById('ea1_p49res18').value;
+        localStorage.setItem('ea1_p49res18', ea1_p49res18);
+        var ea1_p49res19 = document.getElementById('ea1_p49res19').value;
+        localStorage.setItem('ea1_p49res19', ea1_p49res19);
+        var ea1_p49res20 = document.getElementById('ea1_p49res20').value;
+        localStorage.setItem('ea1_p49res20', ea1_p49res20);
+        var ea1_p49res21 = document.getElementById('ea1_p49res21').value;
+        localStorage.setItem('ea1_p49res21', ea1_p49res21);
+
+        alert("Saved correctly");
+    }
+
+    function send_data(){
+        pantallazo();
+        setTimeout(function(){document.getElementById("myForm").submit();}, 3000);
+    }
+
+    function pantallazo(){
+
+        html2canvas(document.body).then(canvas => {
+        	var dataURL = canvas.toDataURL();
+            console.log(dataURL);
+            document.getElementById("myInput").value = dataURL;
+            var canvas = document.createElement("canvas");
+            var ctx=canvas.getContext("2d");
+            var cw=canvas.width;
+            var ch=canvas.height;
+            var maxW=1280;
+            var maxH=1024;
+
+            var output = document.getElementById('myInput');
+	        var img = new Image;
+            img.onload = function() {
+                var iw=img.width;
+                var ih=img.height;
+                var scale=Math.min((maxW/iw),(maxH/ih));
+                var iwScaled=iw*scale;
+                var ihScaled=ih*scale;
+                canvas.width=iwScaled;
+                canvas.height=ihScaled;
+                ctx.drawImage(img,0,0,iwScaled,ihScaled);
+     	        output.value = canvas.toDataURL("image/jpeg",1);
+            }
+            img.src = dataURL
+        });
+    }
+    
+    function loader(){
+		document.getElementById('loader').style.display = 'Block';
+ 
+	}
+
+</script>
+
+</html>

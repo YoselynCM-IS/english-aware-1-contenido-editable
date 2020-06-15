@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style/style.css?rnd=132">
+  
+    <!--***** dos lineas de scripts para guardar imagen-->
+    <script type="text/javascript" src="../../js/html2canvas.js"></script>
+    <script type="text/javascript" src="../../js/html2canvas.min.js"></script>
+    <!--***** Fin de dos lineas de scripts para guardar imagen-->
+
+</head>
+
+<body>
+
+    <div id="contenedor">
+          <div style="position:absolute;top:0.000000px;left:0.000000px"><nobr><img height="1020.000000" width="794.000000" src ="bgimg/bg00001.jpg"/></nobr></div><p><span style="font-family:Helvetica;font-size:16.000000px;font-style:normal;font-weight:normal;color:#FFFFFF;"><span style="position:absolute;top:967.344849px;left:715.854614px"><nobr>87 </nobr></span></span></p><p><span style="font-family:Avenir;font-size:11.000000px;font-weight:bold;color:#5B7BBC;"><span style="position:absolute;top:283.912445px;left:56.666645px"><nobr>c . <span style="color:#000000;">Write sentences. Be careful with subject and verb agreement. </span></nobr></span><span style="position:absolute;top:303.276459px;left:75px"><nobr><span style="font-family:Helvetica;font-size:10.000000px;font-style:normal;font-weight:normal;color:#D3035E;"><textarea id="ea1_p87res1" style="margin: 0px; width: 661px; height: 15px;"></textarea><br><textarea id="ea1_p87res2" style="margin: 0px; width: 661px; height: 15px;"></textarea><br><textarea id="ea1_p87res3" style="margin: 0px; width: 661px; height: 15px;"></textarea><br><textarea id="ea1_p87res4" style="margin: 0px; width: 661px; height: 15px;"></textarea><br><textarea id="ea1_p87res5" style="margin: 0px; width: 661px; height: 15px;"></textarea><br><textarea id="ea1_p87res6" style="margin: 0px; width: 661px; height: 15px;"></textarea><br><textarea id="ea1_p87res7" style="margin: 0px; width: 661px; height: 15px;"></textarea><br><textarea id="ea1_p87res8" style="margin: 0px; width: 661px; height: 15px;"></textarea></span></nobr></span></span></p><p><span style="font-family:Avenir;font-size:11.000000px;font-weight:bold;color:#5B7BBC;"><span style="position:absolute;top:115.990074px;left:56.666645px"><nobr>b . <span style="color:#000000;">Make a list of 10 verbs. </span></nobr></span><span style="position:absolute;top:139.712234px;left:70px"><nobr><span style="font-family:Helvetica;font-size:10.000000px;font-style:normal;font-weight:normal;color:#D3035E;"><textarea id="ea1_p87res2" style="margin: 0px; width: 313px; height: 15px;"></textarea><br><textarea id="ea1_p87res9" style="margin: 0px; width: 313px; height: 15px;"></textarea><br><textarea id="ea1_p87res10" style="margin: 0px; width: 313px; height: 15px;"></textarea><br><textarea id="ea1_p87res11" style="margin: 0px; width: 313px; height: 15px;"></textarea></span></nobr></span><span style="position:absolute;top:139.712234px;left:420px"><nobr><span style="font-family:Helvetica;font-size:10.000000px;font-style:normal;font-weight:normal;color:#D3035E;"><textarea id="ea1_p87res3" style="margin: 0px; width: 313px; height: 15px;"></textarea><br><textarea id="ea1_p87res12" style="margin: 0px; width: 313px; height: 15px;"></textarea><br><textarea id="ea1_p87res13" style="margin: 0px; width: 313px; height: 15px;"></textarea><br><textarea id="ea1_p87res14" style="margin: 0px; width: 313px; height: 15px;"></textarea></span></nobr></span></span></p>  
+          <form style="margin-top: 540px;margin-left: 190px; position: absolute; z-index: 2;" id="myForm" action="../../send.php" method="post"><textarea style="display:none;" id="myInput" name = "imagen"></textarea><input type="button" onclick="save_data()" value="Save"  class="btn btn-primary">&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" onclick="send_data(); loader(); return false" value="Send" class="btn btn-primary">    <input type="hidden" id="ea1_regNA" name="ea1_regNA">
+    <input type="hidden" id="ea1_regGP" name="ea1_regGP">
+    <input type="hidden" id="ea1_regCA" name="ea1_regCA">
+    <input type="hidden" id="ea1_regND" name="ea1_regND">
+    <input type="hidden" id="ea1_regCD" name="ea1_regCD"></form>
+    </div>
+    <!-- empieza la carga los datos que se cargan-->
+    <div id="loader" style="display:none; margin-top: 530px;margin-left: 190px; position: absolute; z-index: 2;"><img src="../../img/carga.gif"  width="180px" height="65px"></div>      
+</body>
+<script type="text/javascript">
+    //Carga datos del registro
+    document.getElementById('ea1_regNA').value = localStorage.getItem('ea1_regNA');
+    document.getElementById('ea1_regGP').value = localStorage.getItem('ea1_regGP');
+    document.getElementById('ea1_regCA').value = localStorage.getItem('ea1_regCA');
+    document.getElementById('ea1_regND').value = localStorage.getItem('ea1_regND');
+    document.getElementById('ea1_regCD').value = localStorage.getItem('ea1_regCD');
+
+    document.getElementById('ea1_p87res1').value = localStorage.getItem('ea1_p87res1');
+    document.getElementById('ea1_p87res2').value = localStorage.getItem('ea1_p87res2');
+    document.getElementById('ea1_p87res3').value = localStorage.getItem('ea1_p87res3');
+
+    document.getElementById('ea1_p87res4').value = localStorage.getItem('ea1_p87res4');
+    document.getElementById('ea1_p87res5').value = localStorage.getItem('ea1_p87res5');
+    document.getElementById('ea1_p87res6').value = localStorage.getItem('ea1_p87res6');
+    document.getElementById('ea1_p87res7').value = localStorage.getItem('ea1_p87res7');
+    document.getElementById('ea1_p87res8').value = localStorage.getItem('ea1_p87res8');
+    document.getElementById('ea1_p87res9').value = localStorage.getItem('ea1_p87res9');
+    document.getElementById('ea1_p87res10').value = localStorage.getItem('ea1_p87res10');
+    document.getElementById('ea1_p87res11').value = localStorage.getItem('ea1_p87res11');
+    document.getElementById('ea1_p87res12').value = localStorage.getItem('ea1_p87res12');
+    document.getElementById('ea1_p87res13').value = localStorage.getItem('ea1_p87res13');
+    document.getElementById('ea1_p87res14').value = localStorage.getItem('ea1_p87res14');
+
+    function save_data(){
+        var ea1_p87res1 = document.getElementById('ea1_p87res1').value;
+        localStorage.setItem('ea1_p87res1', ea1_p87res1);
+        var ea1_p87res2 = document.getElementById('ea1_p87res2').value;
+        localStorage.setItem('ea1_p87res2', ea1_p87res2);
+        var ea1_p87res3 = document.getElementById('ea1_p87res3').value;
+        localStorage.setItem('ea1_p87res3', ea1_p87res3);
+
+        var ea1_p87res4 = document.getElementById('ea1_p87res4').value;
+        localStorage.setItem('ea1_p87res4', ea1_p87res4);
+        var ea1_p87res5 = document.getElementById('ea1_p87res5').value;
+        localStorage.setItem('ea1_p87res5', ea1_p87res5);
+        var ea1_p87res6 = document.getElementById('ea1_p87res6').value;
+        localStorage.setItem('ea1_p87res6', ea1_p87res6);
+        var ea1_p87res7 = document.getElementById('ea1_p87res7').value;
+        localStorage.setItem('ea1_p87res7', ea1_p87res7);
+        var ea1_p87res8 = document.getElementById('ea1_p87res8').value;
+        localStorage.setItem('ea1_p87res8', ea1_p87res8);
+        var ea1_p87res9 = document.getElementById('ea1_p87res9').value;
+        localStorage.setItem('ea1_p87res9', ea1_p87res9);
+        var ea1_p87res10 = document.getElementById('ea1_p87res10').value;
+        localStorage.setItem('ea1_p87res10', ea1_p87res10);
+        var ea1_p87res11 = document.getElementById('ea1_p87res11').value;
+        localStorage.setItem('ea1_p87res11', ea1_p87res11);
+        var ea1_p87res12 = document.getElementById('ea1_p87res12').value;
+        localStorage.setItem('ea1_p87res12', ea1_p87res12);
+        var ea1_p87res13 = document.getElementById('ea1_p87res13').value;
+        localStorage.setItem('ea1_p87res13', ea1_p87res13);
+        var ea1_p87res14 = document.getElementById('ea1_p87res14').value;
+        localStorage.setItem('ea1_p87res14', ea1_p87res14);
+
+        alert("Saved correctly");
+    }
+
+
+    function send_data(){
+        pantallazo();
+        setTimeout(function(){document.getElementById("myForm").submit();}, 3000);
+    }
+
+    function pantallazo(){
+
+        html2canvas(document.body).then(canvas => {
+            var dataURL = canvas.toDataURL();
+            console.log(dataURL);
+            document.getElementById("myInput").value = dataURL;
+            var canvas = document.createElement("canvas");
+            var ctx=canvas.getContext("2d");
+            var cw=canvas.width;
+            var ch=canvas.height;
+            var maxW=1280;
+            var maxH=1024;
+
+            var output = document.getElementById('myInput');
+            var img = new Image;
+            img.onload = function() {
+                var iw=img.width;
+                var ih=img.height;
+                var scale=Math.min((maxW/iw),(maxH/ih));
+                var iwScaled=iw*scale;
+                var ihScaled=ih*scale;
+                canvas.width=iwScaled;
+                canvas.height=ihScaled;
+                ctx.drawImage(img,0,0,iwScaled,ihScaled);
+                output.value = canvas.toDataURL("image/jpeg",0.5);
+            }
+            img.src = dataURL
+        });
+    }
+    
+    function loader(){
+        document.getElementById('loader').style.display = 'Block';
+ 
+    }
+
+</script>
+
+</html>
