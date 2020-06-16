@@ -56,9 +56,9 @@ $mensaje .= '<br><img src="https://majesticeducacion.com.mx/nuevo/wp-content/upl
 $mail->From = "ebook@majesticeducacion.com.mx"; //remitente
 $mail->FromName = "Majestic Education";//nombre remitente
 $mail->SMTPAuth = true;
-$mail->SMTPAutoTLS = false;
-$mail->Host = "localhost"; // servidor smtp
-$mail->Port = 587; //puerto
+$mail->SMTPSecure = 'ssl'; //seguridad
+$mail->Host = "mail.majesticeducacion.com.mx"; // servidor smtp
+$mail->Port = 465; //puerto
 $mail->Username ='ebook@majesticeducacion.com.mx'; //nombre usuario
 $mail->Password = 'Q[ioa2]lHg^h'; //contraseña
 
