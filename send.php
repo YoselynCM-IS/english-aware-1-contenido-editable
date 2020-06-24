@@ -60,7 +60,7 @@ $mail->SMTPSecure = 'ssl'; //seguridad
 $mail->Host = "mail.majesticeducationdigital.com"; // servidor smtp
 $mail->Port = 465; //puerto
 $mail->Username ='ebook@majesticeducacion.com'; //nombre usuario
-$mail->Password = '3b00k898'; //contraseña
+$mail->Password = 'xAp3Rm9=xO+a'; //contraseña
 
  
 //Agregar destinatario
