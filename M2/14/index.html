@@ -81,6 +81,18 @@
     <div id="loader" style="display:none; margin-top: 1030px;margin-left: 190px; position: absolute; z-index: 2;">
         <img src="../../img/carga.gif"  width="180px" height="65px">
     </div>
+       
+       <span style="position: absolute; top: 204px; left: 650px">
+			<textarea rows = "1" cols = "15" maxlength = "15" id="ea1_p41res17"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="ea1_p41res18"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="ea1_p41res19"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="ea1_p41res20"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="ea1_p41res21"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="ea1_p41res22"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="ea1_p41res23"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="ea1_p41res24"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="ea1_p41res25"></textarea>
+		</span>
         <!--Fin del contenido-->
             
     </div>       
@@ -104,6 +116,15 @@
     document.getElementById('ea1_p41res9').value = localStorage.getItem('ea1_p41res9');
     document.getElementById('ea1_p41res10').value = localStorage.getItem('ea1_p41res10');
     document.getElementById('ea1_p41res11').value = localStorage.getItem('ea1_p41res11');
+	document.getElementById('ea1_p41res17').value = localStorage.getItem('ea1_p41res17');
+    document.getElementById('ea1_p41res18').value = localStorage.getItem('ea1_p41res18');
+    document.getElementById('ea1_p41res19').value = localStorage.getItem('ea1_p41res19');
+    document.getElementById('ea1_p41res20').value = localStorage.getItem('ea1_p41res20');
+    document.getElementById('ea1_p41res21').value = localStorage.getItem('ea1_p41res21');
+    document.getElementById('ea1_p41res22').value = localStorage.getItem('ea1_p41res22');
+    document.getElementById('ea1_p41res23').value = localStorage.getItem('ea1_p41res23');
+    document.getElementById('ea1_p41res24').value = localStorage.getItem('ea1_p41res24');
+    document.getElementById('ea1_p41res25').value = localStorage.getItem('ea1_p41res25');
      // ** INICIO ACTIVACION CHECKBOK ** //
     if(document.getElementById('ea1_p41res11').value == "1")
         document.getElementById("ea1_p41res11").checked = true; 
@@ -202,6 +223,24 @@
         }    
         localStorage.setItem('ea1_p41res16', ea1_p41res16);
         //** FIN PARA GUARDAR CHECKBOX **//
+		var ea1_p41res17 = document.getElementById('ea1_p41res17').value;
+        localStorage.setItem('ea1_p41res17', ea1_p41res17);
+        var ea1_p41res18 = document.getElementById('ea1_p41res18').value;
+        localStorage.setItem('ea1_p41res18', ea1_p41res18);
+        var ea1_p41res19 = document.getElementById('ea1_p41res19').value;
+        localStorage.setItem('ea1_p41res19', ea1_p41res19);
+        var ea1_p41res20 = document.getElementById('ea1_p41res20').value;
+        localStorage.setItem('ea1_p41res20', ea1_p41res20);
+        var ea1_p41res21 = document.getElementById('ea1_p41res21').value;
+        localStorage.setItem('ea1_p41res21', ea1_p41res21);
+        var ea1_p41res22 = document.getElementById('ea1_p41res22').value;
+        localStorage.setItem('ea1_p41res22', ea1_p41res22);
+        var ea1_p41res23 = document.getElementById('ea1_p41res23').value;
+        localStorage.setItem('ea1_p41res23', ea1_p41res23);
+        var ea1_p41res24 = document.getElementById('ea1_p41res24').value;
+        localStorage.setItem('ea1_p41res24', ea1_p41res24);
+        var ea1_p41res25 = document.getElementById('ea1_p41res25').value;
+        localStorage.setItem('ea1_p41res25', ea1_p41res25);
 
 
         alert("Saved correctly");

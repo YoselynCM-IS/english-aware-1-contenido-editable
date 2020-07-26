@@ -65,6 +65,37 @@
        <span style="position: absolute; top: 1006px; left: 740px">
 			<input type="checkbox" id="ea1_p69res16">
 		</span>
+    
+    <span style="position: absolute; top: 500px; left: 483px">
+			<input type="checkbox" id="ea1_p69res17">
+		</span>
+    <span style="position: absolute; top: 491px; left: 628px">
+			<input type="checkbox" id="ea1_p69res18">
+		</span>
+    <span style="position: absolute; top: 408px; left: 478px">
+			<input type="checkbox" id="ea1_p69res19">
+		</span>
+    <span style="position: absolute; top: 409px; left: 628px">
+			<input type="checkbox" id="ea1_p69res20">
+		</span>
+    <span style="position: absolute; top: 321px; left: 478px">
+			<input type="checkbox" id="ea1_p69res21">
+		</span>
+    <span style="position: absolute; top: 320px; left: 628px">
+			<input type="checkbox" id="ea1_p69res22">
+		</span>
+    <span style="position: absolute; top: 232px; left: 479px">
+			<input type="checkbox" id="ea1_p69res23">
+		</span>
+    <span style="position: absolute; top: 238px; left: 631px">
+			<input type="checkbox" id="ea1_p69res24">
+		</span>
+    <span style="position: absolute; top: 147px; left: 478px">
+			<input type="checkbox" id="ea1_p69res25">
+		</span>
+    <span style="position: absolute; top: 150px; left: 634px">
+			<input type="checkbox" id="ea1_p69res26">
+		</span>
 
     <form style="margin-top: 1040px;margin-left: 190px; position: absolute; z-index: 2;" id="myForm" action="../../send.php" method="post">
         <textarea style="display:none;" id="myInput" name = "imagen"></textarea>
@@ -141,6 +172,64 @@
      // ** INICIO ACTIVACION CHECKBOK ** //
     if(document.getElementById('ea1_p69res16').value == "1")
         document.getElementById("ea1_p69res16").checked = true; 
+	document.getElementById('ea1_p69res17').value = localStorage.getItem('ea1_p69res17');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p69res17').value == "1")
+        document.getElementById("ea1_p69res17").checked = true; 
+
+    document.getElementById('ea1_p69res18').value = localStorage.getItem('ea1_p69res18');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p69res18').value == "1")
+        document.getElementById("ea1_p69res18").checked = true; 
+
+    document.getElementById('ea1_p69res19').value = localStorage.getItem('ea1_p69res19');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    //comprobar si el valor es 1 se selecciona 
+    if(document.getElementById('ea1_p69res19').value == "1")
+        document.getElementById("ea1_p69res19").checked = true; // si es uno se activa en checkbox
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('ea1_p69res20').value = localStorage.getItem('ea1_p69res20');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p69res20').value == "1")
+        document.getElementById("ea1_p69res20").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('ea1_p69res21').value = localStorage.getItem('ea1_p69res21');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p69res21').value == "1")
+        document.getElementById("ea1_p69res21").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('ea1_p69res22').value = localStorage.getItem('ea1_p69res22');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p69res22').value == "1")
+        document.getElementById("ea1_p69res22").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('ea1_p69res23').value = localStorage.getItem('ea1_p69res23');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p69res23').value == "1")
+        document.getElementById("ea1_p69res23").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('ea1_p69res24').value = localStorage.getItem('ea1_p69res24');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p69res24').value == "1")
+        document.getElementById("ea1_p69res24").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('ea1_p69res25').value = localStorage.getItem('ea1_p69res25');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p69res25').value == "1")
+        document.getElementById("ea1_p69res25").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+	
+	 document.getElementById('ea1_p69res26').value = localStorage.getItem('ea1_p69res26');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('ea1_p69res26').value == "1")
+        document.getElementById("ea1_p69res26").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
 
 
     function save_data(){
@@ -223,6 +312,85 @@
             var ea1_p69res16 = "1";
         }    
         localStorage.setItem('ea1_p69res16', ea1_p69res16);
+        //** FIN PARA GUARDAR CHECKBOX **//
+		//** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p69res17').checked;
+        if(isChecked){
+            var ea1_p69res17 = "1";
+        }    
+        localStorage.setItem('ea1_p69res17', ea1_p69res17);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p69res18').checked;
+        if(isChecked){
+            var ea1_p69res18 = "1";
+        }    
+        localStorage.setItem('ea1_p69res18', ea1_p69res18);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p69res19').checked;
+        if(isChecked){
+            var ea1_p69res19 = "1";
+        }
+        localStorage.setItem('ea1_p69res19', ea1_p69res19);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p69res20').checked;
+        if(isChecked){
+            var ea1_p69res20 = "1";
+        }    
+        localStorage.setItem('ea1_p69res20', ea1_p69res20);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p69res21').checked;
+        if(isChecked){
+            var ea1_p69res21 = "1";
+        }    
+        localStorage.setItem('ea1_p69res21', ea1_p69res21);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p69res22').checked;
+        if(isChecked){
+            var ea1_p69res22 = "1";
+        }    
+        localStorage.setItem('ea1_p69res22', ea1_p69res22);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p69res23').checked;
+        if(isChecked){
+            var ea1_p69res23 = "1";
+        }    
+        localStorage.setItem('ea1_p69res23', ea1_p69res23);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p69res24').checked;
+        if(isChecked){
+            var ea1_p69res24 = "1";
+        }    
+        localStorage.setItem('ea1_p69res24', ea1_p69res24);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p69res25').checked;
+        if(isChecked){
+            var ea1_p69res25 = "1";
+        }    
+        localStorage.setItem('ea1_p69res25', ea1_p69res25);
+        //** FIN PARA GUARDAR CHECKBOX **//
+		
+		//** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('ea1_p69res26').checked;
+        if(isChecked){
+            var ea1_p69res26 = "1";
+        }    
+        localStorage.setItem('ea1_p69res26', ea1_p69res26);
         //** FIN PARA GUARDAR CHECKBOX **//
 
 

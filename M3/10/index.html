@@ -32,22 +32,27 @@
 	  </span>
        
        <span style="position: absolute; top: 789px; left: 84px">
-			<textarea rows = "1" cols = "40" maxlength = "40" id="ea1_p55res6"></textarea>
+			<textarea rows = "1" cols = "40" maxlength = "40" id="ea1_p55res6"></textarea><br>
+	  <textarea rows = "1" cols = "40" maxlength = "40" id="ea1_p55res50"></textarea>
 	  </span>
        <span style="position: absolute; top: 628px; left: 84px">
 			<textarea rows = "1" cols = "40" maxlength = "40" id="ea1_p55res7"></textarea>
 	  </span>
       <span style="position: absolute; top: 628px; left: 84px">
-	  <textarea rows = "1" cols = "40" maxlength = "40" id="ea1_p55res8"></textarea>
+	  <textarea rows = "1" cols = "40" maxlength = "40" id="ea1_p55res8"></textarea><br>
+	  <textarea rows = "1" cols = "40" maxlength = "40" id="ea1_p55res49"></textarea>
 	  </span>
       <span style="position: absolute; top: 668px; left: 84px">
-	  <textarea rows = "1" cols = "40" maxlength = "40" id="ea1_p55res9"></textarea>
+	  <textarea rows = "1" cols = "40" maxlength = "40" id="ea1_p55res9"></textarea><br>
+	  <textarea rows = "1" cols = "40" maxlength = "40" id="ea1_p55res48"></textarea>
 	  </span>
       <span style="position: absolute; top: 708px; left: 84px">
-	  <textarea rows = "1" cols = "40" maxlength = "40" id="ea1_p55res10"></textarea>
+	  <textarea rows = "1" cols = "40" maxlength = "40" id="ea1_p55res10"></textarea><br>
+	  <textarea rows = "1" cols = "40" maxlength = "40" id="ea1_p55res47"></textarea>
 	  </span>
        <span style="position: absolute; top: 748px; left: 84px">
-			<textarea rows = "1" cols = "40" maxlength = "40" id="ea1_p55res11"></textarea>
+			<textarea rows = "1" cols = "40" maxlength = "40" id="ea1_p55res11"></textarea><br>
+	  <textarea rows = "1" cols = "40" maxlength = "40" id="ea1_p55res46"></textarea>
 	  </span>
        
        <span style="position: absolute; top: 186px; left: 459px">
@@ -219,6 +224,11 @@
     document.getElementById('ea1_p55res36').value = localStorage.getItem('ea1_p55res36');
     document.getElementById('ea1_p55res37').value = localStorage.getItem('ea1_p55res37');
     document.getElementById('ea1_p55res38').value = localStorage.getItem('ea1_p55res38');
+	document.getElementById('ea1_p55res38').value = localStorage.getItem('ea1_p55res46');
+	document.getElementById('ea1_p55res38').value = localStorage.getItem('ea1_p55res47');
+	document.getElementById('ea1_p55res38').value = localStorage.getItem('ea1_p55res48');
+	document.getElementById('ea1_p55res38').value = localStorage.getItem('ea1_p55res49');
+	document.getElementById('ea1_p55res38').value = localStorage.getItem('ea1_p55res50');
     // ** INICIO ACTIVACION CHECKBOK ** //
     if(document.getElementById('ea1_p55res38').value == "1")
         document.getElementById("ea1_p55res38").checked = true; 
@@ -341,6 +351,16 @@
         localStorage.setItem('ea1_p55res36', ea1_p55res36);
         var ea1_p55res37 = document.getElementById('ea1_p55res37').value;
         localStorage.setItem('ea1_p55res37', ea1_p55res37);
+		var ea1_p55res46 = document.getElementById('ea1_p55res46').value;
+        localStorage.setItem('ea1_p55res46', ea1_p55res46);
+        var ea1_p55res47 = document.getElementById('ea1_p55res47').value;
+        localStorage.setItem('ea1_p55res47', ea1_p55res47);
+        var ea1_p55res48 = document.getElementById('ea1_p55res48').value;
+        localStorage.setItem('ea1_p55res48', ea1_p55res48);
+        var ea1_p55res49 = document.getElementById('ea1_p55res49').value;
+        localStorage.setItem('ea1_p55res49', ea1_p55res49);
+        var ea1_p55res50 = document.getElementById('ea1_p55res50').value;
+        localStorage.setItem('ea1_p55res50', ea1_p55res50);
          //** INICIO PARA GUARDAR CHECKBOX **//
         var isChecked = document.getElementById('ea1_p55res38').checked;
         if(isChecked){
